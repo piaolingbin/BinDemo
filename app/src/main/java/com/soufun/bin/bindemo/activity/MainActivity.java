@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                 if(position == 2){
                     startActivity(new Intent(MainActivity.this , BookManagerActivity.class));
                 }
+                if(position == 3){
+                    startActivity(new Intent(MainActivity.this , ProviderActivity.class));
+                }
             }
         });
         headerTitle = (TextView) findViewById(R.id.tv_header_title);

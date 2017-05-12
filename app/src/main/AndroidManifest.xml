@@ -36,6 +36,14 @@
             android:process=":remote" />
 
         <activity android:name=".activity.BookManagerActivity" />
+
+        <provider
+            android:name=".BookProvider"
+            android:authorities="com.soufun.bin.bindemo.provider"
+            android:permission="com.soufun.PRIVIDER"
+            android:process=":provider" />
+
+        <activity android:name=".activity.ProviderActivity"></activity>
     </application>
 
 </manifest>
