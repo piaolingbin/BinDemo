@@ -32,6 +32,7 @@ public class BookManagerActivity extends AppCompatActivity {
                 case MSG_NEW_BOOK_ARRIVED:
                     Log.i(TAG , "新书 ： " + msg.obj + "已到");
                     break;
+                    hello,wo gai le ni de dai ma ! hia hia !
             }
         }
     };
