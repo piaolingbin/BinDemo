@@ -8,4 +8,7 @@ package com.soufun.bin.bindemo.activity;
  */
 
 public class hellogit {
+    public static String getGitBranch(){
+        return "hello";
+    }
 }
