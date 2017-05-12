@@ -36,7 +36,6 @@
             android:process=":remote" />
 
         <activity android:name=".activity.BookManagerActivity" />
-        <activity android:name=".activity.HelloGitActivity"></activity>
     </application>
 
 </manifest>
