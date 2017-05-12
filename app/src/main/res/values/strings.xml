@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BinDemo</string>
+    <string name="title_activity_messenger">MessengerActivity</string>
+</resources>
