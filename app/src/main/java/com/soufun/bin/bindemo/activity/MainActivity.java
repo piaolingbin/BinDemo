@@ -42,14 +42,21 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new HomeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                if(position == 1){
-                    startActivity(new Intent(MainActivity.this , MessengerActivity.class));
-                }
-                if(position == 2){
-                    startActivity(new Intent(MainActivity.this , BookManagerActivity.class));
-                }
-                if(position == 3){
-                    startActivity(new Intent(MainActivity.this , ProviderActivity.class));
+                switch (position){
+                    case 1:
+                        startActivity(new Intent(MainActivity.this , MessengerActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this , BookManagerActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this , ProviderActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this , TCPClientActivity.class));
+                        break;
+                    default:
+                        break;
                 }
             }
         });

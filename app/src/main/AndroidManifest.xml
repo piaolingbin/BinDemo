@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.soufun.bin.bindemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -43,7 +46,13 @@
             android:permission="com.soufun.PRIVIDER"
             android:process=":provider" />
 
-        <activity android:name=".activity.ProviderActivity"></activity>
+        <activity android:name=".activity.ProviderActivity" />
+        <activity android:name=".activity.TCPClientActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            ></activity>
+
+        <service android:name=".service.TCPService"/>
     </application>
 
 </manifest>
