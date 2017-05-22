@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        getWindow().getDecorView();
     }
 
     private void initView() {
@@ -54,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this , TCPClientActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this , BinderPoolActivity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(MainActivity.this , ScrollViewActivity.class));
                         break;
                     default:
                         break;

@@ -47,12 +47,20 @@
             android:process=":provider" />
 
         <activity android:name=".activity.ProviderActivity" />
-        <activity android:name=".activity.TCPClientActivity"
+        <activity
+            android:name=".activity.TCPClientActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:windowSoftInputMode="adjustResize"
-            ></activity>
+            android:windowSoftInputMode="adjustResize" />
 
-        <service android:name=".service.TCPService"/>
+        <service android:name=".service.TCPService" />
+        <service
+            android:name=".service.BinderPoolService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".activity.BinderPoolActivity" />
+        <activity android:name=".activity.ScrollViewActivity"></activity>
     </application>
 
 </manifest>

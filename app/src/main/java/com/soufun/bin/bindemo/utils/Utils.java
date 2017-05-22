@@ -1,5 +1,13 @@
 package com.soufun.bin.bindemo.utils;
 
+import android.app.ActivityManager;
+import android.content.Context;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
+
+import java.io.Closeable;
+import java.io.IOException;
+
 /**
  * @描述
  * @入口
@@ -47,4 +55,26 @@ public class Utils {
             return false;
         }
     }
+
+    public static void close(Closeable closeable) {
+        try {
+            if (closeable != null) {
+                closeable.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static DisplayMetrics getScreenMetrics(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        return dm;
+    }
+
+    public static void executeInThread(Runnable runnable) {
+        new Thread(runnable).start();
+    }
+
 }
